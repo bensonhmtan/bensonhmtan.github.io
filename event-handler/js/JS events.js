@@ -18,6 +18,6 @@ function checkPassword(){
     }
 }
 
-//
+// traditional DOM event handler
 let e1KL = document.getElementById("kataLaluan")
 e1KL.onblur = checkPassword
