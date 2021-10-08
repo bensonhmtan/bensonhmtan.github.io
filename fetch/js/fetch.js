@@ -75,7 +75,7 @@ function loadGender(gender, userCount){
         let resultDiv = document.getElementById("allGenderUsers")
         let temp = ""
 
-        for(let i = 0; i < data.result.length; i++){
+        for(let i = 0; i < data.results.length; i++){
             let fn = '<div>' + data.results[i].name.first + '</div>'        
             let ln = '<div>' + data.results[i].name.last + '</div>' 
             let phone = '<div>' + data.results[i].phone + '</div>' 
