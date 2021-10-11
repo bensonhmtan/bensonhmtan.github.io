@@ -50,5 +50,12 @@ function GetBooking(){
 }
 
 function DeleteBooking(id){
-    console.log("received id = " + id)
+    let url = 'https://api.sheety.co/79f0e93efd9a5066dde9b42ffa1f55c9/bookingApp/bookings/' + id;
+    fetch(url, {
+        method: 'DELETE',
+})
+    .then(() => {
+        alert("Record id" + id + "deleted!")
+        GetBooking()
+    });
 }

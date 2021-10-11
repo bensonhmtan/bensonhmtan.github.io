@@ -1,5 +1,5 @@
 let bookNowBtn = document.getElementById("bookNow")
-bookNowBtn.addEventListener("click", function(){
+bookNowBtn.addEventListener("click", function() {
     let userName = document.getElementById("userName")
     let userNameVal = userName.value
 
@@ -16,7 +16,7 @@ bookNowBtn.addEventListener("click", function(){
 
 })
 
-function BookNow(userName, userEmail, userPax, userRemarks){
+function BookNow(userName, userEmail, userPax, userRemarks) {
     let url = 'https://api.sheety.co/79f0e93efd9a5066dde9b42ffa1f55c9/bookingApp/bookings';
     let body = {
         booking: {
@@ -31,12 +31,12 @@ function BookNow(userName, userEmail, userPax, userRemarks){
       body: JSON.stringify(body),
       headerd: {
           "Content-Type": "application/json"
-      }
+        }
     })
         .then((response) => response.json())
         .then(json => {
-        // Do something with object
-        console.log(json.booking);        
-        alert(json.booking.name + " added in the list!")
-    });
+            // Do something with object
+            console.log(json.booking);        
+            alert(json.booking.name + " added in the list!")
+        });
 }
