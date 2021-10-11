@@ -36,6 +36,7 @@ function BookNow(userName, userEmail, userPax, userRemarks){
         .then((response) => response.json())
         .then(json => {
         // Do something with object
-        console.log(json.booking);
+        console.log(json.booking);        
+        alert(json.booking.name + " added in the list!")
     });
 }
